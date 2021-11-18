@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+const { program } = require('commander');
+
+const { readJsonPackageConfig, readConfigFile, validateConfig } = require('../src/utils.js');
+const { DEFAULT_CUSTOM_CONFIG_FILENAME } = require('../src/config.js');
+const createServer = require('../src/index.js');
+
+const { name, version } = readJsonPackageConfig();
+
+// -v --version
+program.version(`${name}  v${version}`, '-v, --version');
+
+// -f --filename
+program.option(
+  '-f, --filename <path>',
+  `custom config filename,
+default to ${DEFAULT_CUSTOM_CONFIG_FILENAME}`
+);
+
+program.parse();
+
+// 获取配置文件
+const opts = program.opts();
+const config = readConfigFile(opts.filename);
+
+// 校验配置
+validateConfig(config);
+
+createServer(config);

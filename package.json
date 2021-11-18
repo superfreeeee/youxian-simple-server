@@ -1,0 +1,46 @@
+{
+  "name": "@youxian/simple-server",
+  "version": "0.1.0",
+  "description": "sample library created from @youxian/cli",
+  "keywords": [
+    "library",
+    "youxian"
+  ],
+  "author": "superfree",
+  "homepage": "https://github.com/superfreeeee",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "bin": {
+    "serve": "bin/serve"
+  },
+  "scripts": {
+    "start": "nodemon ./bin/serve"
+  },
+  "files": [
+    "bin",
+    "src",
+    ".gitignore",
+    ".prettierrc",
+    "package.json",
+    "README.md",
+    "server-default.config.json"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superfreeeee"
+  },
+  "bugs": {
+    "url": "https://github.com/superfreeeee"
+  },
+  "dependencies": {
+    "commander": "^8.3.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.15"
+  }
+}
