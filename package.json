@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "description": "sample library created from @youxian/cli",
   "keywords": [
-    "library",
+    "http",
+    "server",
+    "node",
     "youxian"
   ],
   "author": "superfree",
-  "homepage": "https://github.com/superfreeeee",
+  "homepage": "https://github.com/superfreeeee/youxian-simple-server",
   "license": "MIT",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "bin": {
     "serve": "bin/serve"
   },
@@ -31,10 +31,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/superfreeeee"
+    "url": "git+https://github.com/superfreeeee/youxian-simple-server"
   },
   "bugs": {
-    "url": "https://github.com/superfreeeee"
+    "url": "https://github.com/superfreeeee/youxian-simple-server/issues"
   },
   "dependencies": {
     "commander": "^8.3.0"
